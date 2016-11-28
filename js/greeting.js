@@ -17,6 +17,7 @@ It is also an "anonymous" function because it has/needs no name.
   var getName = document.getElementById("get-name");
 
   function PerformGreeting() {
+    event.preventDefault();
     myName.innerHTML = userName.value;
 
     /*
