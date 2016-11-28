@@ -1,5 +1,7 @@
 # A simple introduction to JavaScript and the DOM
 
-Clone this repository instead of just downloading it. See the comments and try out the suggestions.
+*Clone* this repository using `git clone https://github.com/CTEC3905/javascript-01.git` instead of just downloading it.
+
+Read through the comments int he code and try out the suggestions.
 
 You can [view this page here](https://ctec3905.github.io/javascript-01/).
