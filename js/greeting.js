@@ -1,11 +1,13 @@
 /*
-The code below is wrapped in an "(anonymous) self-executing function"
-or "Immediately-invoked Function Expression" (IIFE). It is "anonymous"
-because it has/needs no name.
+An "Immediately-Invoked Function Expression" (IIFE) contains
+all the code. the final brackets () ensure that it executes.
 
 This is good practice because:
-- local references to objects decrease lookup times
 - it keeps your variables out of the global namespace
+- local references to objects decrease lookup times
+- it is a foundation for further code organisation
+
+It is also an "anonymous" function because it has/needs no name.
 */
 
 (function(){
@@ -37,7 +39,6 @@ This is good practice because:
   */
   // getName.addEventListener("click", PerformGreeting);
 
-})(); 
+}()); 
 
 // the final brackets () make the anonymous function execute immediately
-
