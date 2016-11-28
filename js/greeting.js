@@ -17,14 +17,15 @@ It is also an "anonymous" function because it has/needs no name.
   var getName = document.getElementById("get-name");
 
   function PerformGreeting() {
-    event.preventDefault();
     myName.innerHTML = userName.value;
-
     /*
     Without setting the variables first, this would be longer:
     */
     // document.getElementById("my-name").innerHTML =
     // document.getElementById("user-name").value;
+
+    event.preventDefault(); // disables default form submission
+    return false; // prevents further "bubbling" up of event
   }
 
   /*
@@ -40,6 +41,5 @@ It is also an "anonymous" function because it has/needs no name.
   */
   // getName.addEventListener("click", PerformGreeting);
 
-}()); 
-
+}());
 // the final brackets () make the anonymous function execute immediately

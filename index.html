@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Javascript: Event Listener</title>
+  <style>
+    #get-name { background: #eee; padding: 0.5em; }
+  </style>
 </head>
 <body>
   <p>Hello, <span id="my-name">anonymous user</span>!</p>
 
-  <form id="get-name" action="#" style="background: #eee;"><!--must have an action!-->
+  <form id="get-name" action="#" method="post">
     <label for="user-name">Enter name:</label>
     <input type="text" id="user-name" placeholder="Your name?">
     <input type="submit">
   </form>
 
   <!--
-    try loading the script tag inside the head section, then check the console.
+    try loading the script tag inside the head section, then check the 
+    browser's JavaScript console (inspect element).
+
     Can you work out what the problem is?
   -->
   <script src="js/greeting.js"></script>
