@@ -3,37 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Javascript: Event Listener</title>
-  <!--<script src="js/greeting.js"></script>-->
 </head>
 <body>
   <p>Hello, <span id="my-name">anonymous user</span>!</p>
 
-  <form id="get-name" action="#"><!--must have an action!-->
-    <label for="user-name">Enter name:</label><input type="text" id="user-name" placeholder="Your name?">
-    <input type="button" id="greet-button" value="Greet Me!">
+  <form id="get-name" action="#" style="background: #eee;"><!--must have an action!-->
+    <label for="user-name">Enter name:</label>
+    <input type="text" id="user-name" placeholder="Your name?">
     <input type="submit">
   </form>
 
-  <script>
-
-var myName = document.getElementById("my-name"); 
-var userName = document.getElementById("user-name"); 
-var greetButton = document.getElementById("greet-button");
-var getName = document.getElementById("get-name");
-
-function PerformGreeting() {
-  myName.innerHTML = userName.value;
-  // document.getElementById("my-name").innerHTML =
-  // document.getElementById("user-name").value;
-}
-
-// getName.addEventListener("click", PerformGreeting);
-getName.addEventListener("submit", PerformGreeting);
-// greetButton.onclick = PerformGreeting;
-// greetButton.onclick = alert("clicked!");
-// greetButton.onmouseenter = PerformGreeting;
-// greetButton.addEventListener("mouseenter", PerformGreeting);
-
-  </script>
+  <!--
+    try loading the script tag inside the head section, then check the console.
+    Can you work out what the problem is?
+  -->
+  <script src="js/greeting.js"></script>
 </body>
 </html>
