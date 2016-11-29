@@ -15,9 +15,11 @@ It is also an "anonymous" function because it has/needs no name.
   var myName = document.getElementById("my-name"); 
   var userName = document.getElementById("user-name"); 
   var getName = document.getElementById("get-name");
+  var myHeader = document.getElementById("my-header");
 
   function PerformGreeting() {
     myName.innerHTML = userName.value;
+    myHeader.innerHTML = userName.value;
     /*
     Without setting the variables first, this would be longer:
     */
