@@ -20,6 +20,7 @@ It is also an "anonymous" function because it has/needs no name.
   function PerformGreeting() {
     myName.innerHTML = userName.value;
     myHeader.innerHTML = userName.value;
+    myHeader.classList.add("change-me");
     /*
     Without setting the variables first, this would be longer:
     */
