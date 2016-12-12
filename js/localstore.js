@@ -20,6 +20,7 @@
   function PerformGreeting() {
     if(userName.value === "") {
       alert("Please enter a name");
+      userName.focus();
     }
     // Get the name the user entered:
     nameStored = userName.value;
