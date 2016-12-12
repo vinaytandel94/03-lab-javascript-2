@@ -1,23 +1,24 @@
 (function(){
 
-  var myName = document.getElementById("my-name"); 
-  var userName = document.getElementById("user-name"); 
-  var getName = document.getElementById("get-name");
-  var name = localStorage.name;
-  console.log(`global: ${name}`);
+  let myName = document.getElementById("my-name"); 
+  let getName = document.getElementById("get-name");
+  let userName = document.getElementById("user-name"); 
+  let nameStored = localStorage.name;
+  console.log(`Name on page load: ${nameStored}`);
   
-  if(name !== userName.value) {
-    myName.innerHTML = name;
-    console.log(`If: ${name}`);
-  } else {
-    localStorage.name = userName.value;
-    console.log(`Else: ${name}`);
+  if(nameStored !== userName.value) {
+    myName.innerHTML = nameStored;
+    console.log(`Name is new/changed: ${nameStored}`);
   }
+  // else {
+  //   localStorage.name = userName.value;
+  //   console.log(`Set name to new input: ${nameStored}`);
+  // }
 
   function PerformGreeting() {
-    name = userName.value;
-    localStorage.name = name;
-    console.log(`In function: ${name}`);
+    nameStored = userName.value;
+    localStorage.name = nameStored;
+    console.log(`Greetings: ${nameStored}`);
     return false;
   }
 
