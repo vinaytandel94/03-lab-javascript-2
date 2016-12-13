@@ -2,7 +2,8 @@
 
   let myName = document.getElementById("my-name"); 
   let getName = document.getElementById("get-name");
-  let userName = document.getElementById("user-name"); 
+  let userName = document.getElementById("user-name");
+  let chooseColor = document.getElementById("choose-color");
   let nameStored = localStorage.name;
   console.log(`Name on page load: ${nameStored}`);
   
@@ -22,6 +23,9 @@
       alert("Please enter a name");
       userName.focus();
     }
+    // Gets the chosen colour:
+    console.log(chooseColor.value);
+    document.body.style.backgroundColor = chooseColor.value;
     // Get the name the user entered:
     nameStored = userName.value;
     // Show the name in "my-name":

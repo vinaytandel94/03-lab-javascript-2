@@ -8,13 +8,14 @@
     .change-me { background: #ffc; }
   </style>
 </head>
-<body>
+<body id="content">
   <h1>Hello <span id="my-name"></span>!</h1>
 
   <form id="get-name" action="#" method="post">
     <label for="user-name">Enter name:</label>
     <input type="text" id="user-name" placeholder="Your name?">
     <input type="submit"><input type="reset" value="Clear">
+    <input type="color" id="choose-color" value="#999999">
   </form>
 
   <script src="js/localstore.js"></script>
