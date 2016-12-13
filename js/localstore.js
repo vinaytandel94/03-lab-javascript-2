@@ -32,6 +32,12 @@
     return false;
   }
 
+  function clearData() {
+    console.log(`before clear: ${localStorage.name}`);
+    localStorage.clear();
+    console.log(`after clear: ${localStorage.name}`);
+  }
+
   // Listens for a form submit action: 
   if (typeof event === "undefined") {
     getName.onsubmit = PerformGreeting; // for Firefox
@@ -40,5 +46,7 @@
     getName.addEventListener("submit", PerformGreeting);
     event.preventDefault();
   }
+  // Chrome/IE only
+  getName.addEventListener("reset", clearData);
 
 }());
