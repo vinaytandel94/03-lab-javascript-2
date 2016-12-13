@@ -34,7 +34,10 @@
 
   function clearData() {
     console.log(`before clear: ${localStorage.name}`);
+    // Clears all Local Storage data:
     localStorage.clear();
+    // Clears one key-value pair e.g. data:
+    // delete localStorage.name;
     console.log(`after clear: ${localStorage.name}`);
   }
 
