@@ -6,16 +6,22 @@
   let chooseColor = document.getElementById("choose-color");
   let nameStored = localStorage.name;
   let colorStored = localStorage.color;
+  
   console.log(`Name on page load: ${nameStored}`);
   
   if(nameStored) {
-    // If there's a name in localStorage, use it:
-    myName.innerHTML = `again ${nameStored}`;
-	document.body.style.backgroundColor = colorStored;
+    myName.innerHTML = `again ${nameStored}!`;
+    /*
+      Adds the stored colour as a style attribute to the body tag.
+      Can you create a CSS style and add a class to the body instead?
+      See:
+      https://www.w3.org/wiki/Dynamic_style_-_manipulating_CSS_with_JavaScript
+    */
+    document.body.style.backgroundColor = colorStored;
     console.log(`Name stored is: ${nameStored}`);
+    console.log(`Colour stored is: ${colorStored}`);
   }
   else {
-    // There's no name in localStorage:
     myName.innerHTML = "stranger";
     console.log(`No name stored`);
   }
@@ -28,24 +34,26 @@
     // Gets the chosen colour:
     console.log(chooseColor.value);
     document.body.style.backgroundColor = chooseColor.value;
-    // Get the name the user entered:
+
+    // Stores the name and colour the user entered:
     nameStored = userName.value;
-	colorStored = chooseColor.value;
-    // Show the name in "my-name":
+    colorStored = chooseColor.value;
+
+    // Shows the name in "my-name":
     myName.innerHTML = nameStored;
-    // Put the name into localStorage:
+
+    // Puts the name and colour into localStorage:
     localStorage.name = nameStored;
-	localStorage.color = colorStored;
+    localStorage.color = colorStored;
+
     console.log(`New name stored: ${nameStored}`);
+
     return false;
   }
 
   function clearData() {
     console.log(`before clear: ${localStorage.name}`);
-    // Clears all Local Storage data:
     localStorage.clear();
-    // Clears one key-value pair e.g. data:
-    // delete localStorage.name;
     console.log(`after clear: ${localStorage.name}`);
   }
 
