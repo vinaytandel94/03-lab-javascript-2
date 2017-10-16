@@ -4,6 +4,8 @@
   let getName = document.getElementById("get-name");
   let userName = document.getElementById("user-name"); 
   let nameStored = localStorage.name;
+
+  // Displays the name in the console at this stage:
   console.log(`Name on page load: ${nameStored}`);
   
   if(nameStored) {
@@ -22,17 +24,21 @@
       alert("Please enter a name");
       userName.focus();
     }
-    // Get the name the user entered:
+    // Gets the name the user entered:
     nameStored = userName.value;
-    // Show the name in "my-name":
+    
+    // Shows the name in "my-name":
     myName.innerHTML = nameStored;
-    // Put the name into localStorage:
+    
+    // Puts the name into localStorage:
     localStorage.name = nameStored;
+    
+    // Displays the name in the console at the final stage:
     console.log(`New name stored: ${nameStored}`);
+    
     return false;
   }
 
-  // Listens for a form submit action: 
   if (typeof event === "undefined") {
     getName.onsubmit = PerformGreeting; // for Firefox
   }
